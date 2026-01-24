@@ -8,7 +8,7 @@ class SmartPhone(Mobile):
         print("Brand:", self.brand)
         print("Model:", self.model)
         print("sim Type:", self.simType)
-
+        print("companyName:", self.companyName)
 
 s = SmartPhone()
 s.getDevice()
