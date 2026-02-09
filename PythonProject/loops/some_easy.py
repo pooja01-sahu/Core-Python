@@ -28,16 +28,16 @@ for num in numbers:
 print("total of even number", total)
 
 # control flow loop
-for i in range(1,11):
+for i in range(1, 11):
     if i == 5:
-        print("value of i",i)
+        print("value of i", i)
         continue
     if i == 9:
-        print("value of i",i)
+        print("value of i", i)
         break
-print("what i value of i",i)
+print("what i value of i", i)
 # some list iterate
-fruits = ["apple", "banana", "cherry","Mango"]
+fruits = ["apple", "banana", "cherry", "Mango"]
 for fruit in fruits:
     print(fruit)
     if fruit == "cherry":
@@ -48,3 +48,21 @@ names = ["A", "B", "C"]
 
 for index, value in enumerate(names):
     print(index, value)
+
+# loopp through dictionary
+
+person = {"name": "pooja", "age": 24}
+
+for key, value in person.items():
+    print(key, value)
+
+# Loop with zip(Multiple list]
+names = ["Riya", "Tanvisha", "Priyanka", "Rajat"]
+marks = [78, 87, 98, 87, 45]
+
+namesl = len(names)
+print(namesl)
+marksl = len(marks)
+print(marksl)
+for name, mark in zip(names, marks):
+    print(name, mark)
