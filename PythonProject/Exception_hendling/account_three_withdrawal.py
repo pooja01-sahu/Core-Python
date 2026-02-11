@@ -19,19 +19,16 @@ class Account_Withdrawal:
         print(f"Deposited: {amount}, Current balance: {self.balance}")
 
     def withdraw(self, amount):
-        # Check withdrawal limit first
         if self.count >= 3:
             raise InsufficientFundException(
                 "You are not allowed more than 3 withdrawals"
             )
 
-        # Check minimum balance rule
         if self.balance - amount < 2000:
             raise InsufficientFundException(
                 "Insufficient funds! Minimum balance of 2000 required"
             )
 
-        # If both conditions pass
         self.balance -= amount
         self.count += 1
         print(f"Withdrawn: {amount}, Current balance: {self.balance}")
